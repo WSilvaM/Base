@@ -17,7 +17,9 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                cn.ConnectionString = "";
+
+                //documento UDL
+                cn.ConnectionString = @"User ID=sa;Initial Catalog=Loja;Data Source=.\SQLEXPRESS2019;Password=Senailab05";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;

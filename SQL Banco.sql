@@ -1,7 +1,7 @@
 create database Loja
 IF exists(SELECT 1 FROM sys.dataBases where name = 'Loja')
 
-drop database Loja
+
 
 GO
 create database Loja
@@ -23,12 +23,16 @@ GO
 	@Ativo BIT
 
 AS
-   
 
 
-	Insert into Usuario(Ativo, NomeUsuario, senha )
-	Values(@Ativo, @NomeUsuario,@Senha)
-	select @@IDENTITY
+INSERT INTO USUARIO(Ativo, NomeUsuario, Senha)
+VALUES(@ATIVO, @NomeUsuario, @Senha)
+set @Id = (select @@IDENTITY)
+--select @@IDENTITY
 
-GO
+Go
 
+EXEC SP_InserirUsuario 0, 'Teste', '123', 1 
+EXEC SP_InserirUsuario 0, 'Wanderson', '123456', 1
+
+SELECT * FROM USUARIO  
