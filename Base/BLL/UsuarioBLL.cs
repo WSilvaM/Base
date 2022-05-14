@@ -6,15 +6,12 @@ namespace BLL
 {
     public class UsuarioBLL
     {
-       public void Inserir()
+       public void Inserir(Usuario _usuario)
         {
-            Usuario usuario = new Usuario();
-            usuario.NomeUsuario = "joão";
-            usuario.Senha = "asf123";
-            usuario.Ativo = true;
+            
 
             UsuarioDAL usuarioDAL = new UsuarioDAL();
-            usuarioDAL.Inserir(usuario);
+            usuarioDAL.Inserir(_usuario);
         }
 
         public void Excluir()
