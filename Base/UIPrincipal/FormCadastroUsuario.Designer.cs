@@ -100,7 +100,7 @@ namespace UIPrincipal
             this.buttonSair.Name = "buttonSair";
             this.buttonSair.Size = new System.Drawing.Size(75, 38);
             this.buttonSair.TabIndex = 2;
-            this.buttonSair.Text = "Sair&";
+            this.buttonSair.Text = "S&air";
             this.buttonSair.UseVisualStyleBackColor = true;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 

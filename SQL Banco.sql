@@ -35,5 +35,6 @@ Go
 EXEC SP_InserirUsuario 0, 'Teste', '123', 1 
 EXEC SP_InserirUsuario 0, 'Wanderson', '123456', 1
 
+SELECT * FROM USUARIO
 SELECT * FROM USUARIO  
 

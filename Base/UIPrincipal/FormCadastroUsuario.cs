@@ -24,7 +24,7 @@ namespace UIPrincipal
             catch (Exception ex)
             {
 
-                MessageBox.Show("Ocorreu um erro:" + ex.Message);
+                MessageBox.Show("Ocorreu um erro!" + ex.Message);
             }
         }
 
