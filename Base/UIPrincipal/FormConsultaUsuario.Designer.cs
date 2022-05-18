@@ -31,14 +31,14 @@ namespace UIPrincipal
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonNovo = new System.Windows.Forms.Button();
-            this.buttonAltera = new System.Windows.Forms.Button();
-            this.buttonExcluir = new System.Windows.Forms.Button();
-            this.buttonSair = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonBusca = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonSair = new System.Windows.Forms.Button();
+            this.buttonExcluir = new System.Windows.Forms.Button();
+            this.buttonAltera = new System.Windows.Forms.Button();
+            this.buttonNovo = new System.Windows.Forms.Button();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,20 +58,29 @@ namespace UIPrincipal
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(746, 100);
+            this.panel1.Size = new System.Drawing.Size(919, 100);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel3
+            // buttonBusca
             // 
-            this.panel3.Controls.Add(this.buttonSair);
-            this.panel3.Controls.Add(this.buttonExcluir);
-            this.panel3.Controls.Add(this.buttonAltera);
-            this.panel3.Controls.Add(this.buttonNovo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 422);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(746, 49);
-            this.panel3.TabIndex = 2;
+            this.buttonBusca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBusca.Location = new System.Drawing.Point(805, 73);
+            this.buttonBusca.Name = "buttonBusca";
+            this.buttonBusca.Size = new System.Drawing.Size(102, 24);
+            this.buttonBusca.TabIndex = 4;
+            this.buttonBusca.Text = "Busca";
+            this.buttonBusca.UseVisualStyleBackColor = true;
+            this.buttonBusca.Click += new System.EventHandler(this.buttonBusca_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(12, 77);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(787, 20);
+            this.textBox1.TabIndex = 3;
             // 
             // label1
             // 
@@ -82,24 +91,31 @@ namespace UIPrincipal
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de usuários";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // buttonNovo
+            // panel3
             // 
-            this.buttonNovo.Location = new System.Drawing.Point(12, 5);
-            this.buttonNovo.Name = "buttonNovo";
-            this.buttonNovo.Size = new System.Drawing.Size(83, 41);
-            this.buttonNovo.TabIndex = 0;
-            this.buttonNovo.Text = "No&vo";
-            this.buttonNovo.UseVisualStyleBackColor = true;
+            this.panel3.Controls.Add(this.buttonSair);
+            this.panel3.Controls.Add(this.buttonExcluir);
+            this.panel3.Controls.Add(this.buttonAltera);
+            this.panel3.Controls.Add(this.buttonNovo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 547);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(919, 47);
+            this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // buttonAltera
+            // buttonSair
             // 
-            this.buttonAltera.Location = new System.Drawing.Point(101, 6);
-            this.buttonAltera.Name = "buttonAltera";
-            this.buttonAltera.Size = new System.Drawing.Size(75, 39);
-            this.buttonAltera.TabIndex = 1;
-            this.buttonAltera.Text = "Alt&era";
-            this.buttonAltera.UseVisualStyleBackColor = true;
+            this.buttonSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSair.Location = new System.Drawing.Point(819, 3);
+            this.buttonSair.Name = "buttonSair";
+            this.buttonSair.Size = new System.Drawing.Size(88, 39);
+            this.buttonSair.TabIndex = 3;
+            this.buttonSair.Text = "S&air";
+            this.buttonSair.UseVisualStyleBackColor = true;
+            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
             // buttonExcluir
             // 
@@ -110,31 +126,24 @@ namespace UIPrincipal
             this.buttonExcluir.Text = "Ex&cluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
             // 
-            // buttonSair
+            // buttonAltera
             // 
-            this.buttonSair.Location = new System.Drawing.Point(639, 5);
-            this.buttonSair.Name = "buttonSair";
-            this.buttonSair.Size = new System.Drawing.Size(92, 39);
-            this.buttonSair.TabIndex = 3;
-            this.buttonSair.Text = "S&air";
-            this.buttonSair.UseVisualStyleBackColor = true;
-            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
+            this.buttonAltera.Location = new System.Drawing.Point(101, 6);
+            this.buttonAltera.Name = "buttonAltera";
+            this.buttonAltera.Size = new System.Drawing.Size(75, 39);
+            this.buttonAltera.TabIndex = 1;
+            this.buttonAltera.Text = "Alt&era";
+            this.buttonAltera.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // buttonNovo
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(655, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // buttonBusca
-            // 
-            this.buttonBusca.Location = new System.Drawing.Point(664, 78);
-            this.buttonBusca.Name = "buttonBusca";
-            this.buttonBusca.Size = new System.Drawing.Size(67, 23);
-            this.buttonBusca.TabIndex = 4;
-            this.buttonBusca.Text = "Busca";
-            this.buttonBusca.UseVisualStyleBackColor = true;
+            this.buttonNovo.Location = new System.Drawing.Point(12, 5);
+            this.buttonNovo.Name = "buttonNovo";
+            this.buttonNovo.Size = new System.Drawing.Size(83, 41);
+            this.buttonNovo.TabIndex = 0;
+            this.buttonNovo.Text = "No&vo";
+            this.buttonNovo.UseVisualStyleBackColor = true;
+            this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click);
             // 
             // usuarioBindingSource
             // 
@@ -142,6 +151,9 @@ namespace UIPrincipal
             // 
             // usuarioDataGridView
             // 
+            this.usuarioDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usuarioDataGridView.AutoGenerateColumns = false;
             this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -149,10 +161,11 @@ namespace UIPrincipal
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(3, 106);
+            this.usuarioDataGridView.Location = new System.Drawing.Point(12, 104);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
-            this.usuarioDataGridView.Size = new System.Drawing.Size(728, 312);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(895, 437);
             this.usuarioDataGridView.TabIndex = 4;
+            this.usuarioDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usuarioDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -177,12 +190,20 @@ namespace UIPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 471);
+            this.ClientSize = new System.Drawing.Size(919, 594);
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(935, 633);
             this.Name = "FormConsultaUsuario";
-            this.Text = "FormConsultaUsuario";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de usuário";
+            this.Load += new System.EventHandler(this.FormConsultaUsuario_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaUsuario_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

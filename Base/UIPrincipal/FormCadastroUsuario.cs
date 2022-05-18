@@ -20,6 +20,8 @@ namespace UIPrincipal
                 usuarioBindingSource.EndEdit();
                 Inserir();
                 MessageBox.Show("Cadastro realizado com sucesso");
+
+                usuarioBindingSource.AddNew();
             }
             catch (Exception ex)
             {
@@ -42,6 +44,29 @@ namespace UIPrincipal
         private void buttonSair_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void buttonCadastraNovo_Click(object sender, EventArgs e)
+        {
+            usuarioBindingSource.EndEdit();
+            Inserir();
+            MessageBox.Show("Cadastro realizado com sucesso");
+            nomeUsuarioTextBox.Focus();
+            usuarioBindingSource.AddNew();
+
+        }
+
+        private void FormCadastroUsuario_Load(object sender, EventArgs e)
+        {
+            nomeUsuarioTextBox.Focus();
+        }
+
+        private void FormCadastroUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
         }
     }
 }
