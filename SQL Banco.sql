@@ -2,6 +2,7 @@ create database Loja
 IF exists(SELECT 1 FROM sys.dataBases where name = 'Loja')
 
 
+use Loja
 
 GO
 create database Loja
@@ -36,5 +37,31 @@ EXEC SP_InserirUsuario 0, 'Teste', '123', 1
 EXEC SP_InserirUsuario 0, 'Wanderson', '123456', 1
 
 SELECT * FROM USUARIO
+
+ 	CREATE PROC SP_BuscarUsuario
+		@filtro VARCHAR(250) = ''
+
+		AS 
+		    SELECT Id, Ativo, NomeUsuario, Senha from USUARIO where NomeUsuario Like '%' + @filtro + '%'
+		GO
+		
+		CREATE PROC SP_ExcluirUsuario
+		@Id Int
+		AS
+		  DELETE FROM USUARIO WHERE ID = @Id
+		GO
+
+	CREATE PROC SP_AlterarUsuario
+		@Id INT,
+		@Ativo BIT,
+		@NomeUsuario VARCHAR(50),
+		@Senha varchar(50)
+	as
+		UPDATE USUARIO SET
+		Ativo = @Ativo,
+		NomeUsuario = @NomeUsuario,
+		Senha = @Senha
+	WHERE ID = @Id
+		GO
 
 
