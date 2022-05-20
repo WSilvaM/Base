@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,8 @@ namespace UIPrincipal
 
         private void buttonBusca_Click(object sender, EventArgs e)
         {
-
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            usuarioBindingSource.DataSource = usuarioBLL.Buscar(textBoxBuscar.Text);
         }
 
         private void FormConsultaUsuario_Load(object sender, EventArgs e)
@@ -66,6 +68,31 @@ namespace UIPrincipal
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void usuarioDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            int id;
+            id = Convert.ToInt32(((DataRowView)usuarioBindingSource.Current).Row["Id"]);
+
+            usuarioBLL.Excluir(id);
+            usuarioBindingSource.RemoveCurrent();
+
+            MessageBox.Show("Registro excluido com sucesso");
+           // if(MessageBox.Show("Deseja realmente excluir este registro?","Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+            
+                   
+        
+            return;
+
+           //falta codigo aqui
+
         }
     }
 }
