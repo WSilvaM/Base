@@ -135,6 +135,7 @@ namespace UIPrincipal
             this.buttonAltera.TabIndex = 1;
             this.buttonAltera.Text = "Alt&era";
             this.buttonAltera.UseVisualStyleBackColor = true;
+            this.buttonAltera.Click += new System.EventHandler(this.buttonAltera_Click);
             // 
             // buttonNovo
             // 

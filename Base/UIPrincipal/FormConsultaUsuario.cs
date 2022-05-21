@@ -1,12 +1,6 @@
 ﻿using BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UIPrincipal
@@ -51,9 +45,9 @@ namespace UIPrincipal
 
         private void FormConsultaUsuario_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
-                buttonSair_Click(null,null);
+                buttonSair_Click(null, null);
             }
         }
 
@@ -64,7 +58,7 @@ namespace UIPrincipal
 
         private void buttonNovo_Click(object sender, EventArgs e)
         {
-            using (FormCadastroUsuario frm = new FormCadastroUsuario()) 
+            using (FormCadastroUsuario frm = new FormCadastroUsuario())
             {
                 frm.ShowDialog();
             }
@@ -77,6 +71,11 @@ namespace UIPrincipal
 
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
             UsuarioBLL usuarioBLL = new UsuarioBLL();
             int id;
             id = Convert.ToInt32(((DataRowView)usuarioBindingSource.Current).Row["Id"]);
@@ -85,14 +84,17 @@ namespace UIPrincipal
             usuarioBindingSource.RemoveCurrent();
 
             MessageBox.Show("Registro excluido com sucesso");
-           // if(MessageBox.Show("Deseja realmente excluir este registro?","Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
-            
-                   
-        
-            return;
 
-           //falta codigo aqui
 
+
+        }
+
+        private void buttonAltera_Click(object sender, EventArgs e)
+        {
+            using(FormCadastroUsuario frm = new FormCadastroUsuario(usuarioBindingSource.Current))
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }
