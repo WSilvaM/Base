@@ -57,17 +57,20 @@ namespace UIPrincipal
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(919, 100);
+            this.panel1.Size = new System.Drawing.Size(1225, 123);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Location = new System.Drawing.Point(738, 73);
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Location = new System.Drawing.Point(984, 90);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(102, 24);
+            this.buttonBuscar.Size = new System.Drawing.Size(136, 30);
             this.buttonBuscar.TabIndex = 4;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -77,17 +80,19 @@ namespace UIPrincipal
             // 
             this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(28, 77);
+            this.textBoxBuscar.Location = new System.Drawing.Point(37, 95);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(704, 20);
+            this.textBoxBuscar.Size = new System.Drawing.Size(937, 22);
             this.textBoxBuscar.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label1.Location = new System.Drawing.Point(205, 27);
+            this.label1.Location = new System.Drawing.Point(273, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 40);
+            this.label1.Size = new System.Drawing.Size(467, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de usuários";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,18 +105,21 @@ namespace UIPrincipal
             this.panel3.Controls.Add(this.buttonAltera);
             this.panel3.Controls.Add(this.buttonNovo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 547);
+            this.panel3.Location = new System.Drawing.Point(0, 673);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(919, 47);
+            this.panel3.Size = new System.Drawing.Size(1225, 58);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // buttonSair
             // 
             this.buttonSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSair.Location = new System.Drawing.Point(819, 3);
+            this.buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSair.Location = new System.Drawing.Point(1092, 4);
+            this.buttonSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSair.Name = "buttonSair";
-            this.buttonSair.Size = new System.Drawing.Size(88, 39);
+            this.buttonSair.Size = new System.Drawing.Size(117, 48);
             this.buttonSair.TabIndex = 3;
             this.buttonSair.Text = "S&air";
             this.buttonSair.UseVisualStyleBackColor = true;
@@ -119,9 +127,11 @@ namespace UIPrincipal
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(182, 5);
+            this.buttonExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluir.Location = new System.Drawing.Point(243, 6);
+            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(75, 39);
+            this.buttonExcluir.Size = new System.Drawing.Size(100, 48);
             this.buttonExcluir.TabIndex = 2;
             this.buttonExcluir.Text = "Ex&cluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
@@ -129,9 +139,11 @@ namespace UIPrincipal
             // 
             // buttonAltera
             // 
-            this.buttonAltera.Location = new System.Drawing.Point(101, 6);
+            this.buttonAltera.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAltera.Location = new System.Drawing.Point(135, 7);
+            this.buttonAltera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonAltera.Name = "buttonAltera";
-            this.buttonAltera.Size = new System.Drawing.Size(75, 39);
+            this.buttonAltera.Size = new System.Drawing.Size(100, 48);
             this.buttonAltera.TabIndex = 1;
             this.buttonAltera.Text = "Alt&era";
             this.buttonAltera.UseVisualStyleBackColor = true;
@@ -139,9 +151,11 @@ namespace UIPrincipal
             // 
             // buttonNovo
             // 
-            this.buttonNovo.Location = new System.Drawing.Point(12, 5);
+            this.buttonNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNovo.Location = new System.Drawing.Point(16, 6);
+            this.buttonNovo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonNovo.Name = "buttonNovo";
-            this.buttonNovo.Size = new System.Drawing.Size(83, 41);
+            this.buttonNovo.Size = new System.Drawing.Size(111, 50);
             this.buttonNovo.TabIndex = 0;
             this.buttonNovo.Text = "No&vo";
             this.buttonNovo.UseVisualStyleBackColor = true;
@@ -160,9 +174,11 @@ namespace UIPrincipal
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewCheckBoxColumn1});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(28, 106);
+            this.usuarioDataGridView.Location = new System.Drawing.Point(37, 130);
+            this.usuarioDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
-            this.usuarioDataGridView.Size = new System.Drawing.Size(812, 409);
+            this.usuarioDataGridView.RowHeadersWidth = 51;
+            this.usuarioDataGridView.Size = new System.Drawing.Size(1083, 503);
             this.usuarioDataGridView.TabIndex = 2;
             this.usuarioDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usuarioDataGridView_CellContentClick_1);
             // 
@@ -170,6 +186,7 @@ namespace UIPrincipal
             // 
             this.NomeUsuario.DataPropertyName = "NomeUsuario";
             this.NomeUsuario.HeaderText = "NomeUsuario";
+            this.NomeUsuario.MinimumWidth = 6;
             this.NomeUsuario.Name = "NomeUsuario";
             this.NomeUsuario.Width = 265;
             // 
@@ -177,6 +194,7 @@ namespace UIPrincipal
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Id";
             this.dataGridViewTextBoxColumn2.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 265;
             // 
@@ -184,20 +202,22 @@ namespace UIPrincipal
             // 
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Ativo";
             this.dataGridViewCheckBoxColumn1.HeaderText = "Ativo";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.Width = 265;
             // 
             // FormConsultaUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 594);
+            this.ClientSize = new System.Drawing.Size(1225, 731);
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(935, 633);
+            this.MinimumSize = new System.Drawing.Size(1241, 768);
             this.Name = "FormConsultaUsuario";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
