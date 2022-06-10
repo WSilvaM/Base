@@ -14,6 +14,7 @@ namespace UIPrincipal
     {
         public FormPrincipal()
         {
+            
             InitializeComponent();
         }
 
@@ -32,7 +33,8 @@ namespace UIPrincipal
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            Login login = new Login();
+            login.ShowDialog();
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
