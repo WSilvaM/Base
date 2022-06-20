@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace DAL
 {
     public class UsuarioDAL
-    {
+    {//CTRL M O = FECHA TODO OS CODIGOS
         public Usuario Inserir(Usuario _usuario)
         {
             SqlConnection cn = new SqlConnection();
